@@ -1,0 +1,13 @@
+[user]
+	name = fuzz1210
+	email = fuzz1210@gmail.com
+[alias]
+	st = status
+	ad = add .
+	cm = commit
+	df = diff	
+	br = branch
+	mg = merge
+	co = checkout
+	pl = pull
+	ps = push
