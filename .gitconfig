@@ -1,13 +1,19 @@
 [user]
 	name = fuzz1210
 	email = fuzz1210@gmail.com
+[color]
+	ui = auto
 [alias]
+	cf = config
+	cfg = config --global
 	st = status
-	ad = add .
-	cm = commit
+	ad = add -A
 	df = diff	
+	dfw = diff --word-diff
+	cm = commit
 	br = branch
 	mg = merge
 	co = checkout
 	pl = pull
 	ps = push
+	lg = log --graph --date=iso --pretty=format:'%C(red)%d %Creset%C(white reverse) %h %Creset%C(green) %an %Creset%C(yellow)%ad [%ar]%Creset%n%n %C(white)%w(80)%s%Creset%n%n%n %w(80,2,2)%b' 
