@@ -6,13 +6,15 @@ PS1="\$? \$(if [[ \$? == 0 ]]; then echo \"\[\033[0;32m\]:)\"; else echo \"\[\03
 export PATH="$(brew --prefix coreutils)/libexec/gnubin:$PATH"
 
 
-# alias 
-alias ls='ls -AFl --color'
-
-
 # rbenv
 export PATH="$HOME/.rbenv/bin:$PATH"
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
+
+
+# alias 
+alias ls='ls -AFl --color'
+alias br='brew'
+alias brc='brew cask'
 
 
 # bashrc
