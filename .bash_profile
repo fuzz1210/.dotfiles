@@ -1,12 +1,12 @@
-# プロンプト
+# prompt 
 PS1="\$? \$(if [[ \$? == 0 ]]; then echo \"\[\033[0;32m\]:)\"; else echo \"\[\033[0;31m\]:(\"; fi)\[\033[00m\] \u \[\e[0;36m\]\w\[\e[m\] \$ "
 
 
-# coreutils 
+# gnu 
 export PATH="$(brew --prefix coreutils)/libexec/gnubin:$PATH"
 
 
-# コマンドのエイリアス
+# alias 
 alias ls='ls -AFl --color'
 
 
