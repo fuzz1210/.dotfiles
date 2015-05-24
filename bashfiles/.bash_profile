@@ -1,15 +1,15 @@
-# prompt 
+# prompt
 PS1="\$? \$(if [[ \$? == 0 ]]; then echo \"\[\033[0;32m\]:)\"; else echo \"\[\033[0;31m\]:(\"; fi)\[\033[00m\] \u \[\e[0;36m\]\w\[\e[m\] \$ "
 
 
 # bash-git-prompt
-if [ -f "$(brew --prefix bash-git-prompt)/share/gitprompt.sh" ]; then
-    GIT_PROMPT_THEME=Default
-    source "$(brew --prefix bash-git-prompt)/share/gitprompt.sh"
-fi
+# if [ -f "$(brew --prefix bash-git-prompt)/share/gitprompt.sh" ]; then
+#     GIT_PROMPT_THEME=Default
+#     source "$(brew --prefix bash-git-prompt)/share/gitprompt.sh"
+# fi
 
 
-# gnu 
+# gnu
 export PATH="$(brew --prefix coreutils)/libexec/gnubin:$PATH"
 
 
@@ -23,10 +23,10 @@ export NVM_DIR=~/.nvm
 source $(brew --prefix nvm)/nvm.sh
 
 
-# alias 
+# alias
 alias ls='ls -AFl --color'
-alias br='brew'
-alias brc='brew cask'
+alias v='vim'
+alias g='git'
 
 
 # bashrc
