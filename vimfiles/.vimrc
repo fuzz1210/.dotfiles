@@ -11,7 +11,8 @@ set history=100
 "--------------------------------------------------
 " cursor
 "--------------------------------------------------
-set whichwrap=h,l
+set whichwrap=b,s,h,l
+set backspace=start,eol,indent
 
 
 "--------------------------------------------------
@@ -27,7 +28,9 @@ colorscheme jellybeans
 set number
 set cursorline
 set wrap
+set linebreak
 set textwidth=0
+"set breakindent
 set showmatch
 set tabstop=4
 set softtabstop=4
@@ -37,8 +40,10 @@ set cindent
 set list
 "set listchars=tab:\|-,trail:-,eol:¬
 set listchars=tab:\|-,trail:-
+set wildmenu wildmode=list:full
 set cmdheight=2
 set laststatus=2
+set statusline=%F%<\ %m\ %r%=%l\ /\ %L
 
 
 "--------------------------------------------------
