@@ -10,8 +10,7 @@
 	br = branch
 	ch = checkout
 	st = status
-	df = diff
-	dfw = diff --word-diff
+	df = diff --word-diff -w
 	ad = add
 	rs = reset HEAD
 	cm = commit -m
