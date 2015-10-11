@@ -1,9 +1,4 @@
-*
-*/
-!.gitignore
-!bashfiles/
-!bashfiles/*
-!vimfiles/
-!vimfiles/*
-*.swp
+.gitignore
+.DS_Store
+.swp
 *~
