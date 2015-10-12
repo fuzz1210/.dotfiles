@@ -68,15 +68,15 @@ command Q q!
 
 nnoremap ; :
 nnoremap : ;
-nnoremap k  gk
 nnoremap j  gj
+nnoremap k  gk
 nnoremap <Space>h ^
 nnoremap <Space>j 10j^
 nnoremap <Space>k 10k^
 nnoremap <Space>l $
 
-vnoremap k  gk
 vnoremap j  gj
+vnoremap k  gk
 vnoremap <Space>h ^
 vnoremap <Space>j 10j^
 vnoremap <Space>k 10k^
