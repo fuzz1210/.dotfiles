@@ -1,3 +1,7 @@
+# .gitconfig
+
+
+
 [user]
 	name = fuzz1210
 	email = fuzz1210@gmail.com
@@ -6,7 +10,7 @@
 [alias]
 	cf = config
 	cfg = config --global
-	lg = log --graph --date=iso --pretty=format:'%C(red)%d %Creset%C(white reverse) %h %Creset%C(green) %an %Creset%C(yellow)%ad [%ar]%Creset%n%n %C(white)%w(80)%s%Creset%n%n%n %w(80,2,2)%b' 
+	lg = log --graph --date=iso --pretty=format:'--------------------------------------------------------------------------------%n%C(white reverse) %h %Creset %C(green)%an%Creset %C(cyan)%ad (%ar)%Creset%C(yellow)%d%Creset%n%n%C(white)%s%Creset%n'
 	br = branch
 	ch = checkout
 	st = status
