@@ -12,7 +12,7 @@ export PATH="$HOME/.rbenv/bin:$PATH"
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
 ### prompt
-export PS1="\$? \$(if [[ \$? == 0 ]]; then echo \"\[\033[0;32m\]:)\"; else echo \"\[\033[0;31m\]:(\"; fi)\[\033[00m\] \u \[\e[0;36m\]\w\[\e[m\] \$ "
+export PS1="\[\e[0;32m\]\u\[\e[00m\]\[\e[1;30m\]@\h\[\e[00m\] \\[\e[0;36m\]\w\[\e[00m\] \$ "
 
 ### bash-git-prompt
 # if [ -f "$(brew --prefix bash-git-prompt)/share/gitprompt.sh" ]; then
