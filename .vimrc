@@ -81,6 +81,10 @@ vnoremap <Space>h ^
 vnoremap <Space>j 10j^
 vnoremap <Space>k 10k^
 vnoremap <Space>l $
+vnoremap , <
+vnoremap < ,
+vnoremap . >
+vnoremap > .
 
 
 
