@@ -16,7 +16,8 @@
 	bra = branch -a
 	ch = checkout
 	st = status
-	df = diff --word-diff -w
+	df = diff -w
+	dfw = diff -w --color-words
 	ad = add
 	rss = reset --soft
 	rsm = reset --mixed
