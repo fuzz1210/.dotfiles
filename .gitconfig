@@ -6,7 +6,7 @@
 	name = fuzz1210
 	email = fuzz1210@gmail.com
 [color]
-	ui = auto
+	ui = true
 [alias]
 	cf = config
 	cfg = config --global
@@ -30,3 +30,7 @@
 	pl = pull
 [push]
 	default = simple
+[pager]
+    log = diff-highlight | less
+    show = diff-highlight | less
+    diff = diff-highlight | less
