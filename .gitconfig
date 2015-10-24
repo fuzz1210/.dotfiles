@@ -18,7 +18,9 @@
 	st = status
 	df = diff --word-diff -w
 	ad = add
-	rs = reset HEAD
+	rss = reset --soft
+	rsm = reset --mixed
+	rsh = reset --hard
 	cm = commit -m
 	cma = commit -a -m
 	ps = push
