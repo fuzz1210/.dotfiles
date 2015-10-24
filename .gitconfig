@@ -11,13 +11,16 @@
 	cf = config
 	cfg = config --global
 	lg = log --graph --date=iso --pretty=format:'--------------------------------------------------------------------------------%n%C(white reverse) %h %Creset %C(green)%an%Creset %C(cyan)%ad (%ar)%Creset%C(yellow)%d%Creset%n%n%C(white)%s%Creset%n'
+	lgn = log --graph --date=iso --name-status --pretty=format:'--------------------------------------------------------------------------------%n%C(white reverse) %h %Creset %C(green)%an%Creset %C(cyan)%ad (%ar)%Creset%C(yellow)%d%Creset%n%n%C(white)%s%Creset%n'
 	br = branch
+	bra = branch -a
 	ch = checkout
 	st = status
 	df = diff --word-diff -w
 	ad = add
 	rs = reset HEAD
 	cm = commit -m
+	cma = commit -a -m
 	ps = push
 	fc = fetch
 	mg = merge
