@@ -7,8 +7,24 @@ alias ls='ls -AFl --color'
 alias v='vim'
 alias g='git'
 
-### git aliases
-# ./.gitconfig に依存する
+
+
+## git
+
+### git-completion.bash git-prompt.sh
+if [ -f $(brew --prefix)/etc/bash_completion.d/git-completion.bash ]; then
+	source $(brew --prefix)/etc/bash_completion.d/git-completion.bash
+fi
+if [ -f $(brew --prefix)/etc/bash_completion.d/git-prompt.sh ]; then
+	source $(brew --prefix)/etc/bash_completion.d/git-prompt.sh
+fi
+GIT_PS1_SHOWDIRTYSTATE=true
+GIT_PS1_SHOWUPSTREAM=true
+GIT_PS1_SHOWUNTRACKEDFILES=true
+GIT_PS1_SHOWSTASHSTATE=true
+
+### aliases
+# .gitconfig に依存する
 alias gcf='git cf'
 alias gcfg='git cfg'
 alias glg='git lg'
