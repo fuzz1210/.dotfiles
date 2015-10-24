@@ -45,3 +45,6 @@ alias gps='git ps'
 alias gfc='git fc'
 alias gmg='git mg'
 alias gpl='git pl'
+
+### prompt
+PS1="\[\e[0;32m\]\u\[\e[00m\]\[\e[1;30m\]@\h\[\e[00m\] \[\e[0;36m\]\w\[\e[00m\]\[\e[0;33m\]$(__git_ps1)\[\e[00m\] \$ "
