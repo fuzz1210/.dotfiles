@@ -19,6 +19,9 @@
 	st = status
 	df = diff -w -U0
 	dfw = diff -w --color-words -U0
+	gr = grep --full-name -I -n
+	gri = grep --full-name -i -I -n
+	grn = grep --full-name -I -l -n
 	ad = add
 	rss = reset --soft
 	rsm = reset --mixed
