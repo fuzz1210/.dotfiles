@@ -25,6 +25,7 @@ fi
 # .gitconfig に依存する
 alias gcf='git cf'
 alias gcfg='git cfg'
+alias gsh='gsh'
 alias glg='git lg'
 alias glgn='git lgn'
 alias gbr='git br'

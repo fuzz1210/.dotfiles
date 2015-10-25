@@ -10,6 +10,7 @@
 [alias]
 	cf = config
 	cfg = config --global
+	sh = show
 	lg = log --graph --date=iso --pretty=format:'%C(white reverse) %h %Creset --------------------------------------------------------------------------------%n%C(green)%an%Creset %C(cyan)%ad (%ar)%Creset%C(yellow)%d%Creset%n%n%C(white)%s%Creset%n'
 	lgn = log --graph --date=iso --name-status --pretty=format:'%C(white reverse) %h %Creset --------------------------------------------------------------------------------%n%C(green)%an%Creset %C(cyan)%ad (%ar)%Creset%C(yellow)%d%Creset%n%n%C(white)%s%Creset%n'
 	br = branch
