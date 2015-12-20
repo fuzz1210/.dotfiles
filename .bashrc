@@ -6,11 +6,11 @@
 alias ll='ls -AFl --color'
 alias v='vim'
 alias g='git'
+alias brew='env PATH=${PATH/\/Users\/*\/\.anyenv\/envs\/phpenv\/shims:} brew'
 
 
 
 ## git
-
 ### git-completion.bash git-prompt.sh
 if [ -f $(brew --prefix)/etc/bash_completion.d/git-completion.bash ] && [ -f $(brew --prefix)/etc/bash_completion.d/git-prompt.sh ]; then
 	source $(brew --prefix)/etc/bash_completion.d/git-completion.bash
