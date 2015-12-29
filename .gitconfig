@@ -17,8 +17,8 @@
 	bra = branch -a
 	ch = checkout
 	st = status
-	df = diff -w -U0
-	dfw = diff -w --color-words -U0
+	df = diff -w
+	dfw = diff -w --color-words
 	gr = grep --full-name -I -n
 	gri = grep --full-name -i -I -n
 	grn = grep --full-name -I -l -n
