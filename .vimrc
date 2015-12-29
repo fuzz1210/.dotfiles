@@ -75,6 +75,16 @@ nnoremap <Space>j 10j^
 nnoremap <Space>k 10k^
 nnoremap <Space>l $
 
+inoremap <C-c> <Esc>
+inoremap <C-h> <Left>
+inoremap <C-j> <Down>
+inoremap <C-k> <Up>
+inoremap <C-l> <Right>
+inoremap <C-a> <Home>
+inoremap <C-e> <End>
+inoremap <C-d> <Del>
+inoremap <C-b> <BS>
+
 vnoremap j  gj
 vnoremap k  gk
 vnoremap <Space>h ^
