@@ -131,8 +131,11 @@ endif
 NeoBundle 'bling/vim-airline'
 
 NeoBundle 'tpope/vim-surround'
+
 NeoBundle 'bronson/vim-trailing-whitespace'
 command FW FixWhitespace
+
+NeoBundle 'terryma/vim-multiple-cursors'
 
 call neobundle#end()
 filetype plugin indent on
