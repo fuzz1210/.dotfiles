@@ -81,10 +81,11 @@ inoremap <C-j> <Down>
 inoremap <C-k> <Up>
 inoremap <C-l> <Right>
 inoremap <C-a> <Home>
+inoremap <C-o> <Esc>o
 inoremap <C-e> <End>
 inoremap <C-x> <Del>
 inoremap <C-d> <Bs>
-inoremap <C-o> <Esc>o
+inoremap <C-u> <Esc>u
 
 vnoremap j  gj
 vnoremap k  gk
