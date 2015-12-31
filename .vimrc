@@ -23,8 +23,8 @@ set t_Co=256
 set background=dark
 "colorscheme jellybeans
 colorscheme hybrid
-set guifont=Consolas:10h
-"set guifontwide=
+set guifont=Ricty:10h
+set guifontwide=Ricty:10h
 set number
 set cursorline
 set linespace=4
