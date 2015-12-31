@@ -21,11 +21,8 @@ set backspace=start,eol,indent
 syntax on
 set t_Co=256
 set background=dark
-"colorscheme wombat256mod
-colorscheme jellybeans
-"colorscheme freya
-"colorscheme gardener
-"colorscheme flatland
+"colorscheme jellybeans
+colorscheme hybrid
 set guifont=Consolas:10h
 "set guifontwide=
 set number
