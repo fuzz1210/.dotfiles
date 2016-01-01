@@ -61,11 +61,6 @@ set noexpandtab
 " インデントスタイル
 set cindent
 
-" 不可視文字の表示
-"set list
-" 不可視文字に使用する文字
-"set listchars=nbsp:•,tab:\|\ ,trail:•
-
 " コマンドモードのタブ補完
 set wildmenu
 set wildmode=list:full
