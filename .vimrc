@@ -115,6 +115,8 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 NeoBundle 'Shougo/unite.vim'
 " nerd tree
 NeoBundle 'scrooloose/nerdtree'
+" git gutter
+NeoBundle 'airblade/vim-gitgutter'
 " indent guide
 NeoBundle 'nathanaelkane/vim-indent-guides'
 let g:indent_guides_enable_on_vim_startup=1
