@@ -1,40 +1,74 @@
 # .gitconfig
 
-
-
 [user]
-	name = fuzz1210
-	email = fuzz1210@gmail.com
+	name      = fuzz1210
+	email     = fuzz1210@gmail.com
+[core]
+	editor    = vim
 [color]
-	ui = true
-[alias]
-	cf = config
-	cfg = config --global
-	sh = show
-	lg = log --graph --date=iso --pretty=format:'%C(white reverse) %h %Creset --------------------------------------------------------------------------------%n%C(green)%an%Creset %C(cyan)%ad (%ar)%Creset%C(yellow)%d%Creset%n%n%C(white)%s%Creset%n'
-	lgn = log --graph --date=iso --name-status --pretty=format:'%C(white reverse) %h %Creset --------------------------------------------------------------------------------%n%C(green)%an%Creset %C(cyan)%ad (%ar)%Creset%C(yellow)%d%Creset%n%n%C(white)%s%Creset%n'
-	br = branch
-	bra = branch -a
-	ch = checkout
-	st = status
-	df = diff -w
-	dfw = diff -w --color-words
-	gr = grep --full-name -I -n
-	gri = grep --full-name -i -I -n
-	grn = grep --full-name -I -l -n
-	ad = add
-	rss = reset --soft
-	rsm = reset --mixed
-	rsh = reset --hard
-	cm = commit -m
-	cma = commit -a -m
-	ps = push
-	fc = fetch
-	mg = merge
-	pl = pull
+	ui        = true
+[color "status"]
+	added     = green
+	changed   = yellow
+	unmerged  = yellow
+	untracked = red
+[color "diff"]
+	meta      = yellow
+	frag      = cyan
+	old       = red
+	new       = green
+[diff]
+	compactionHeuristic = true
+	renames             = true
+	tool                = vimdiff
+[difftool]
+	prompt    = false
+[commit]
+	verbose   = true
+[merge]
+	ff        = false
+[pull]
+	ff        = only
 [push]
-	default = simple
+	default   = simple
 [pager]
-    log = diff-highlight | less
-    show = diff-highlight | less
-    diff = diff-highlight | less
+	log       = diff-highlight | less
+	show      = diff-highlight | less
+	diff      = diff-highlight | less
+[alias]
+	cf        = config
+	cfg       = config --global
+	sh        = show
+	l         = log --graph --date=short --date-order --pretty=format:'%C(white reverse) %h %Creset %C(green)%an%Creset %C(cyan)%ad%Creset %C(white)%s%Creset%C(yellow)%d%Creset%n'
+	ls        = log --graph --date=short --date-order --pretty=format:'%C(white reverse) %h %Creset %C(green)%an%Creset %C(cyan)%ad%Creset %C(white)%s%Creset%C(yellow)%d%Creset%n' --stat
+	ln        = log --graph --date=short --date-order --pretty=format:'%C(white reverse) %h %Creset %C(green)%an%Creset %C(cyan)%ad%Creset %C(white)%s%Creset%C(yellow)%d%Creset%n' --name-status
+	la        = log --graph --date=short --date-order --pretty=format:'%C(white reverse) %h %Creset %C(green)%an%Creset %C(cyan)%ad%Creset %C(white)%s%Creset%C(yellow)%d%Creset%n' --all
+	b         = branch
+	c         = checkout
+	s         = status -sb
+	a         = add
+	r         = reset --mixed
+	rs        = reset --soft
+	rh        = reset --hard
+	r1        = reset --mixed HEAD^
+	rs1       = reset --soft HEAD^
+	rh1       = reset --hard HEAD^
+	d         = diff -w
+	ds        = diff -w --staged
+	dn        = diff -w --name-only
+	dsn       = diff -w --staged --name-only
+	dt        = difftool
+	dts       = difftool --staged
+	g         = grep --full-name -nI
+	gi        = grep --full-name -nIi
+	bl        = blame
+	cm        = commit -m
+	cma       = commit -ma
+	cmv       = commit -v
+	rb        = rebase
+	rbi       = rebase -i
+	cp        = cherry-pick
+	f         = fetch
+	mg        = merge origin
+	pl        = pull
+	ps        = push
