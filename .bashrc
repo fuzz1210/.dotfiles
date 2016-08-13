@@ -9,6 +9,12 @@ alias v='vim'
 alias g='git'
 alias brew='env PATH=${PATH/\/Users\/*\/\.anyenv\/envs\/phpenv\/shims:} brew'
 
+## gnu
+if [ -d /usr/local/opt/coreutils/libexec/gnubin ] && [ -d /usr/local/opt/coreutils/libexec/gnuman ]; then
+	export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
+	export MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
+fi
+
 ## git
 ### git-completion.bash git-prompt.sh
 if [ -f $(brew --prefix)/etc/bash_completion.d/git-completion.bash ] && [ -f $(brew --prefix)/etc/bash_completion.d/git-prompt.sh ]; then
