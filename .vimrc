@@ -13,6 +13,7 @@ set nobackup
 set history=100
 
 
+
 "--------------------------------------------------
 " cursor
 "--------------------------------------------------
@@ -20,6 +21,7 @@ set history=100
 set whichwrap=b,s,h,l
 " バックスペースで消すことができる文字
 set backspace=start,eol,indent
+
 
 
 "--------------------------------------------------
@@ -53,12 +55,12 @@ set breakindent
 " 対応する括弧の強調
 set showmatch
 
+" タブ
+set noexpandtab
 set tabstop=4
 set softtabstop=4
 set shiftwidth=4
-" ソフトタブの無効
-set noexpandtab
-" インデントスタイル
+" インデントのスタイル
 set cindent
 
 " コマンドモードのタブ補完
@@ -70,8 +72,13 @@ set cmdheight=2
 set laststatus=2
 " ステータスラインに表示する内容
 set statusline=%F%<\ %m\ %r%=%l\ /\ %L
-"autocmd ColorScheme * hi link TwoByteSpace Error
-"autocmd VimEnter,WinEnter * let w:m_tbs = matchadd('TwoByteSpace', '　')
+" 文字の可視化
+set list
+set listchars=tab:\ \ ,eol:↲
+highlight ZenkakuSpace cterm=underline ctermbg=red guibg=#666666
+autocmd BufWinEnter * let w:m3 = matchadd("ZenkakuSpace", '　')
+autocmd WinEnter * let w:m3 = matchadd("ZenkakuSpace", '　')
+
 
 "--------------------------------------------------
 " search/replacement
@@ -128,6 +135,14 @@ NeoBundle 'tpope/vim-surround'
 NeoBundle 'bronson/vim-trailing-whitespace'
 " multi cursors
 NeoBundle 'terryma/vim-multiple-cursors'
+" emmet
+NeoBundle 'mattn/emmet-vim'
+let g:user_emmet_leader_key='<Tab>'
+let g:user_emmet_settings = {
+\	'variables': {
+\		'lang': "ja"
+\	}
+\}
 
 call neobundle#end()
 filetype plugin indent on
@@ -146,35 +161,16 @@ command FW FixWhitespace
 
 nnoremap ; :
 nnoremap : ;
-nnoremap j  gj
-nnoremap k  gk
-nnoremap <Space>h ^
-nnoremap <Space>j 10j^
-nnoremap <Space>k 10k^
-nnoremap <Space>l $
+nnoremap j gj
+nnoremap k gk
 
 inoremap <C-c> <Esc>
-inoremap <C-h> <Left>
-inoremap <C-j> <Down>
-inoremap <C-k> <Up>
-inoremap <C-l> <Right>
 inoremap <C-a> <Home>
 inoremap <C-e> <End>
-inoremap <C-o> <Esc>o
-inoremap <C-x> <Del>
-inoremap <C-d> <Bs>
-inoremap <C-u> <Esc>u
+inoremap <C-d> <Del>
+inoremap <C-h> <Bs>
 
-vnoremap j  gj
-vnoremap k  gk
-vnoremap <Space>h ^
-vnoremap <Space>j 10j^
-vnoremap <Space>k 10k^
-vnoremap <Space>l $
 vnoremap , <
 vnoremap < ,
 vnoremap . >
 vnoremap > .
-
-
-
