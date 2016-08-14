@@ -17,6 +17,8 @@
 	frag      = cyan
 	old       = red
 	new       = green
+[log]
+	date      = iso
 [diff]
 	compactionHeuristic = true
 	renames             = true
@@ -39,10 +41,10 @@
 	cf        = config
 	cfg       = config --global
 	sh        = show
-	l         = log --graph --date=short --date-order --pretty=format:'%C(white reverse) %h %Creset %C(green)%an%Creset %C(cyan)%ad%Creset %C(white)%s%Creset%C(yellow)%d%Creset%n'
-	ls        = log --graph --date=short --date-order --pretty=format:'%C(white reverse) %h %Creset %C(green)%an%Creset %C(cyan)%ad%Creset %C(white)%s%Creset%C(yellow)%d%Creset%n' --stat
-	ln        = log --graph --date=short --date-order --pretty=format:'%C(white reverse) %h %Creset %C(green)%an%Creset %C(cyan)%ad%Creset %C(white)%s%Creset%C(yellow)%d%Creset%n' --name-status
-	la        = log --graph --date=short --date-order --pretty=format:'%C(white reverse) %h %Creset %C(green)%an%Creset %C(cyan)%ad%Creset %C(white)%s%Creset%C(yellow)%d%Creset%n' --all
+	l         = log --graph --abbrev-commit --date=short --date-order --pretty=format:'%C(bold blue)%h%Creset %C(bold cyan)%ad%Creset %C(cyan)(%ar)%Creset %C(bold green)%an%Creset%C(bold yellow)%d%Creset%n~ %C(white)%s%Creset%n'
+	la        = log --graph --abbrev-commit --date=short --date-order --pretty=format:'%C(bold blue)%h%Creset %C(bold cyan)%ad%Creset %C(cyan)(%ar)%Creset %C(bold green)%an%Creset%C(bold yellow)%d%Creset%n~ %C(white)%s%Creset%n' --all
+	ls        = log --graph --abbrev-commit --date=short --date-order --pretty=format:'%C(bold blue)%h%Creset %C(bold cyan)%ad%Creset %C(cyan)(%ar)%Creset %C(bold green)%an%Creset%C(bold yellow)%d%Creset%n~ %C(white)%s%Creset%n' --stat
+	ln        = log --graph --abbrev-commit --date=short --date-order --pretty=format:'%C(bold blue)%h%Creset %C(bold cyan)%ad%Creset %C(cyan)(%ar)%Creset %C(bold green)%an%Creset%C(bold yellow)%d%Creset%n~ %C(white)%s%Creset%n' --name-status
 	b         = branch
 	c         = checkout
 	s         = status -sb
