@@ -16,7 +16,7 @@
 	meta        = yellow
 	frag        = cyan
 	old         = red
-	new         = green
+	new = green
 [color "grep"]
 	linenumber  = yellow
 	match       = bold red
@@ -70,7 +70,7 @@
 	gi          = grep --full-name -nIi
 	bl          = blame
 	cm          = commit -m
-	cma         = commit -ma
+	cma         = commit -am #<msg>引数を渡すために最後にmオプションを記述する
 	cmv         = commit -v
 	rb          = rebase
 	rbi         = rebase -i
