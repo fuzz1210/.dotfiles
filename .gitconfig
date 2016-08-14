@@ -1,76 +1,81 @@
 # .gitconfig
 
 [user]
-	name      = fuzz1210
-	email     = fuzz1210@gmail.com
+	name        = fuzz1210
+	email       = fuzz1210@gmail.com
 [core]
-	editor    = vim
+	editor      = vim
 [color]
-	ui        = true
+	ui          = true
 [color "status"]
-	added     = green
-	changed   = yellow
-	unmerged  = yellow
-	untracked = red
+	added       = green
+	changed     = yellow
+	unmerged    = yellow
+	untracked   = red
 [color "diff"]
-	meta      = yellow
-	frag      = cyan
-	old       = red
-	new       = green
+	meta        = yellow
+	frag        = cyan
+	old         = red
+	new         = green
+[color "grep"]
+	linenumber  = yellow
+	match       = bold red
+	separator   = white
+	filename    = cyan
 [log]
-	date      = iso
+	date        = iso
 [diff]
 	compactionHeuristic = true
 	renames             = true
 	tool                = vimdiff
 [difftool]
-	prompt    = false
+	prompt      = false
 [commit]
-	verbose   = true
+	verbose     = true
 [merge]
-	ff        = false
+	ff          = false
 [pull]
-	ff        = only
+	ff          = only
 [push]
-	default   = simple
+	default     = simple
 [pager]
-	log       = diff-highlight | less
-	show      = diff-highlight | less
-	diff      = diff-highlight | less
+	log         = diff-highlight | less
+	show        = diff-highlight | less
+	diff        = diff-highlight | less
 [alias]
-	cf        = config
-	cfg       = config --global
-	sh        = show
-	l         = log --graph --abbrev-commit --date=short --date-order --pretty=format:'%C(bold blue)%h%Creset %C(bold cyan)%ad%Creset %C(cyan)(%ar)%Creset %C(bold green)%an%Creset%C(bold yellow)%d%Creset%n~ %C(white)%s%Creset%n'
-	la        = log --graph --abbrev-commit --date=short --date-order --pretty=format:'%C(bold blue)%h%Creset %C(bold cyan)%ad%Creset %C(cyan)(%ar)%Creset %C(bold green)%an%Creset%C(bold yellow)%d%Creset%n~ %C(white)%s%Creset%n' --all
-	ls        = log --graph --abbrev-commit --date=short --date-order --pretty=format:'%C(bold blue)%h%Creset %C(bold cyan)%ad%Creset %C(cyan)(%ar)%Creset %C(bold green)%an%Creset%C(bold yellow)%d%Creset%n~ %C(white)%s%Creset%n' --stat
-	ln        = log --graph --abbrev-commit --date=short --date-order --pretty=format:'%C(bold blue)%h%Creset %C(bold cyan)%ad%Creset %C(cyan)(%ar)%Creset %C(bold green)%an%Creset%C(bold yellow)%d%Creset%n~ %C(white)%s%Creset%n' --name-status
-	b         = branch
-	c         = checkout
-	s         = status -sb
-	a         = add
-	r         = reset --mixed
-	rs        = reset --soft
-	rh        = reset --hard
-	r1        = reset --mixed HEAD^
-	rs1       = reset --soft HEAD^
-	rh1       = reset --hard HEAD^
-	d         = diff -w
-	ds        = diff -w --staged
-	dn        = diff -w --name-only
-	dsn       = diff -w --staged --name-only
-	dt        = difftool
-	dts       = difftool --staged
-	g         = grep --full-name -nI
-	gi        = grep --full-name -nIi
-	bl        = blame
-	cm        = commit -m
-	cma       = commit -ma
-	cmv       = commit -v
-	rb        = rebase
-	rbi       = rebase -i
-	cp        = cherry-pick
-	f         = fetch
-	mg        = merge origin
-	pl        = pull
-	ps        = push
+	cf          = config
+	cfg         = config --global
+	sh          = show
+	l           = log --graph --abbrev-commit --date=short --date-order --pretty=format:'%C(bold blue)%h%Creset %C(bold cyan)%ad%Creset %C(cyan)(%ar)%Creset %C(bold green)%an%Creset%C(bold yellow)%d%Creset%n~ %C(white)%s%Creset%n'
+	la          = log --graph --abbrev-commit --date=short --date-order --pretty=format:'%C(bold blue)%h%Creset %C(bold cyan)%ad%Creset %C(cyan)(%ar)%Creset %C(bold green)%an%Creset%C(bold yellow)%d%Creset%n~ %C(white)%s%Creset%n' --all
+	ls          = log --graph --abbrev-commit --date=short --date-order --pretty=format:'%C(bold blue)%h%Creset %C(bold cyan)%ad%Creset %C(cyan)(%ar)%Creset %C(bold green)%an%Creset%C(bold yellow)%d%Creset%n~ %C(white)%s%Creset%n' --stat
+	ln          = log --graph --abbrev-commit --date=short --date-order --pretty=format:'%C(bold blue)%h%Creset %C(bold cyan)%ad%Creset %C(cyan)(%ar)%Creset %C(bold green)%an%Creset%C(bold yellow)%d%Creset%n~ %C(white)%s%Creset%n' --name-status
+	b           = branch
+	c           = checkout
+	s           = status -sb
+	a           = add
+	r           = reset --mixed
+	rs          = reset --soft
+	rh          = reset --hard
+	r1          = reset --mixed HEAD^
+	rs1         = reset --soft HEAD^
+	rh1         = reset --hard HEAD^
+	d           = diff -w
+	ds          = diff -w --staged
+	dn          = diff -w --name-only
+	dsn         = diff -w --staged --name-only
+	dt          = difftool
+	dts         = difftool --staged
+	g           = grep --full-name -nI
+	gi          = grep --full-name -nIi
+	bl          = blame
+	cm          = commit -m
+	cma         = commit -ma
+	cmv         = commit -v
+	rb          = rebase
+	rbi         = rebase -i
+	cp          = cherry-pick
+	f           = fetch
+	mg          = merge origin
+	pl          = pull
+	ps          = push
