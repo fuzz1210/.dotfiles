@@ -48,8 +48,8 @@
 	sh          = show
 	l           = log --graph --abbrev-commit --date=short --date-order --pretty=format:'%C(bold blue)%h%Creset %C(bold cyan)%ad%Creset %C(cyan)(%ar)%Creset %C(bold green)%an%Creset%C(bold yellow)%d%Creset%n~ %C(white)%s%Creset%n'
 	la          = log --graph --abbrev-commit --date=short --date-order --pretty=format:'%C(bold blue)%h%Creset %C(bold cyan)%ad%Creset %C(cyan)(%ar)%Creset %C(bold green)%an%Creset%C(bold yellow)%d%Creset%n~ %C(white)%s%Creset%n' --all
-	ls          = log --graph --abbrev-commit --date=short --date-order --pretty=format:'%C(bold blue)%h%Creset %C(bold cyan)%ad%Creset %C(cyan)(%ar)%Creset %C(bold green)%an%Creset%C(bold yellow)%d%Creset%n~ %C(white)%s%Creset%n' --stat
-	ln          = log --graph --abbrev-commit --date=short --date-order --pretty=format:'%C(bold blue)%h%Creset %C(bold cyan)%ad%Creset %C(cyan)(%ar)%Creset %C(bold green)%an%Creset%C(bold yellow)%d%Creset%n~ %C(white)%s%Creset%n' --name-status
+	ls          = log --graph --abbrev-commit --date=short --date-order --pretty=format:'%C(bold blue)%h%Creset %C(bold cyan)%ad%Creset %C(cyan)(%ar)%Creset %C(bold green)%an%Creset%C(bold yellow)%d%Creset%n~ %C(dim white)%s%Creset%n' --stat
+	ln          = log --graph --abbrev-commit --date=short --date-order --pretty=format:'%C(bold blue)%h%Creset %C(bold cyan)%ad%Creset %C(cyan)(%ar)%Creset %C(bold green)%an%Creset%C(bold yellow)%d%Creset%n~ %C(dim white)%s%Creset%n' --name-status
 	b           = branch
 	c           = checkout
 	s           = status -sb
