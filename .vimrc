@@ -113,13 +113,11 @@ endif
 call neobundle#begin(expand('~/.vim/bundle/'))
 NeoBundleFetch 'Shougo/neobundle.vim'
 
-" unite.vim
+NeoBundle 'nanotech/jellybeans.vim'
+NeoBundle 'w0ng/vim-hybrid'
 NeoBundle 'Shougo/unite.vim'
-" nerd tree
 NeoBundle 'scrooloose/nerdtree'
-" git gutter
 NeoBundle 'airblade/vim-gitgutter'
-" indent guide
 NeoBundle 'nathanaelkane/vim-indent-guides'
 let g:indent_guides_enable_on_vim_startup=1
 if !has('gui_starting')
@@ -127,15 +125,10 @@ if !has('gui_starting')
 	autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd   ctermbg=236
 	autocmd VimEnter,Colorscheme * :hi IndentGuidesEven  ctermbg=237
 endif
-" airline
 NeoBundle 'bling/vim-airline'
-" surround
 NeoBundle 'tpope/vim-surround'
-" trailing whitespace
 NeoBundle 'bronson/vim-trailing-whitespace'
-" multi cursors
 NeoBundle 'terryma/vim-multiple-cursors'
-" emmet
 NeoBundle 'mattn/emmet-vim'
 let g:user_emmet_leader_key='<Tab>'
 let g:user_emmet_settings = {
