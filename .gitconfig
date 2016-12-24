@@ -16,7 +16,7 @@
 	meta        = yellow
 	frag        = cyan
 	old         = red
-	new = green
+	new	        = green
 [color "grep"]
 	linenumber  = yellow
 	match       = bold red
@@ -33,11 +33,15 @@
 [commit]
 	verbose     = true
 [merge]
-	ff          = false
+	ff            = false
+	conflictstyle = diff3
+[mergetool]
+	prompt        = false
+	keepBackup    = false
 [pull]
 	ff          = only
 [push]
-	default     = simple
+	default     = current
 [pager]
 	log         = diff-highlight | less
 	show        = diff-highlight | less
@@ -46,36 +50,39 @@
 	cf          = config
 	cfg         = config --global
 	sh          = show
-	l           = log --graph --abbrev-commit --date=short --date-order --pretty=format:'%C(bold blue)%h%Creset %C(bold cyan)%ad%Creset %C(cyan)(%ar)%Creset %C(bold green)%an%Creset%C(bold yellow)%d%Creset%n~ %C(white)%s%Creset%n'
-	la          = log --graph --abbrev-commit --date=short --date-order --pretty=format:'%C(bold blue)%h%Creset %C(bold cyan)%ad%Creset %C(cyan)(%ar)%Creset %C(bold green)%an%Creset%C(bold yellow)%d%Creset%n~ %C(white)%s%Creset%n' --all
-	ls          = log --graph --abbrev-commit --date=short --date-order --pretty=format:'%C(bold blue)%h%Creset %C(bold cyan)%ad%Creset %C(cyan)(%ar)%Creset %C(bold green)%an%Creset%C(bold yellow)%d%Creset%n~ %C(dim white)%s%Creset%n' --stat
-	ln          = log --graph --abbrev-commit --date=short --date-order --pretty=format:'%C(bold blue)%h%Creset %C(bold cyan)%ad%Creset %C(cyan)(%ar)%Creset %C(bold green)%an%Creset%C(bold yellow)%d%Creset%n~ %C(dim white)%s%Creset%n' --name-status
-	b           = branch
+	l           = log --graph --abbrev-commit --date=short --date-order --find-renames --pretty=format:'%C(bold blue)%h%Creset %C(bold cyan)%ad%Creset %C(cyan)(%ar)%Creset %C(bold green)%an%Creset%C(bold yellow)%d%Creset%n~ %C(white)%s%Creset%n'
+	la          = log --graph --abbrev-commit --date=short --date-order --find-renames --pretty=format:'%C(bold blue)%h%Creset %C(bold cyan)%ad%Creset %C(cyan)(%ar)%Creset %C(bold green)%an%Creset%C(bold yellow)%d%Creset%n~ %C(white)%s%Creset%n' --all
+	ls          = log --graph --abbrev-commit --date=short --date-order --find-renames --pretty=format:'%C(bold blue)%h%Creset %C(bold cyan)%ad%Creset %C(cyan)(%ar)%Creset %C(bold green)%an%Creset%C(bold yellow)%d%Creset%n~ %C(dim white)%s%Creset%n' --stat
+	ln          = log --graph --abbrev-commit --date=short --date-order --find-renames --pretty=format:'%C(bold blue)%h%Creset %C(bold cyan)%ad%Creset %C(cyan)(%ar)%Creset %C(bold green)%an%Creset%C(bold yellow)%d%Creset%n~ %C(dim white)%s%Creset%n' --name-status
+	b           = branch -vv
 	c           = checkout
-	s           = status -sb
+	s           = status --branch --short
 	a           = add
-	r           = reset --mixed
+	r           = reset
 	rs          = reset --soft
+	rm          = reset --mixed
 	rh          = reset --hard
 	r1          = reset --mixed HEAD^
 	rs1         = reset --soft HEAD^
+	rm1         = reset --mixed HEAD^
 	rh1         = reset --hard HEAD^
 	d           = diff -w
+	dn          = diff -w --name-status
 	ds          = diff -w --staged
-	dn          = diff -w --name-only
-	dsn         = diff -w --staged --name-only
+	dns         = diff -w --name-status --staged
 	dt          = difftool
 	dts         = difftool --staged
 	g           = grep --full-name -nI
 	gi          = grep --full-name -nIi
 	bl          = blame
-	cm          = commit -m
-	cma         = commit -am #<msg>引数を渡すために最後にmオプションを記述する
-	cmv         = commit -v
+	cm          = commit
+	cmm         = commit --message
+	f           = fetch --prune
+	m           = merge
+	mt          = mergetool
 	rb          = rebase
-	rbi         = rebase -i
+	rbi         = rebase --interactie
 	cp          = cherry-pick
-	f           = fetch
-	mg          = merge origin
 	pl          = pull
+	plr         = pull --rebase
 	ps          = push
