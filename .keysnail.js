@@ -5,7 +5,7 @@
 // ========================================================================= //
 //{{%PRESERVE%
 //コンテンツへフォーカス
-let focusContent = function(){
+const focusContent = function(){
     let elem = document.commandDispatcher.focusedElement;
     if (elem) {
         elem.blur();
@@ -18,7 +18,7 @@ let focusContent = function(){
 
 // ========================= Special key settings ========================== //
 
-key.quitKey              = "undefined";
+key.quitKey              = "C-c";
 key.helpKey              = "undefined";
 key.escapeKey            = "ESC";
 key.macroStartKey        = "undefined";
@@ -45,7 +45,7 @@ key.setViewKey('G', function (ev) {
     goDoCommand("cmd_scrollTop");
 }, 'ページ先頭へ移動');
 
-key.setViewKey('C-c', function (ev) {
+key.setViewKey('C-v', function (ev) {
     focusContent();
 }, 'コンテンツへフォーカス', true);
 
@@ -119,7 +119,7 @@ key.setViewKey('f', function (ev) {
     BrowserForward();
 }, '進む');
 
-key.setEditKey('C-c', function (ev) {
+key.setEditKey('C-v', function (ev) {
     focusContent();
 }, 'コンテンツへフォーカス', true);
 
