@@ -30,6 +30,8 @@
 	tool                = vimdiff
 [difftool]
 	prompt      = false
+[grep]
+	linenumber  = true
 [commit]
 	verbose     = true
 [merge]
@@ -54,7 +56,7 @@
 	la          = log --graph --abbrev-commit --date=short --date-order --find-renames --pretty=format:'%C(bold blue)%h%Creset %C(bold cyan)%ad%Creset %C(cyan)(%ar)%Creset %C(bold green)%an%Creset%C(bold yellow)%d%Creset%n~ %C(white)%s%Creset%n' --all
 	ls          = log --graph --abbrev-commit --date=short --date-order --find-renames --pretty=format:'%C(bold blue)%h%Creset %C(bold cyan)%ad%Creset %C(cyan)(%ar)%Creset %C(bold green)%an%Creset%C(bold yellow)%d%Creset%n~ %C(dim white)%s%Creset%n' --stat
 	ln          = log --graph --abbrev-commit --date=short --date-order --find-renames --pretty=format:'%C(bold blue)%h%Creset %C(bold cyan)%ad%Creset %C(cyan)(%ar)%Creset %C(bold green)%an%Creset%C(bold yellow)%d%Creset%n~ %C(dim white)%s%Creset%n' --name-status
-	b           = branch -vv
+	b           = branch --verbose --verbose
 	c           = checkout
 	s           = status --branch --short
 	a           = add
@@ -64,18 +66,17 @@
 	rs          = reset --soft
 	rm          = reset --mixed
 	rh          = reset --hard
-	r1          = reset --mixed HEAD^
 	rs1         = reset --soft HEAD^
 	rm1         = reset --mixed HEAD^
 	rh1         = reset --hard HEAD^
-	d           = diff -w
-	dn          = diff -w --name-status
-	ds          = diff -w --staged
-	dns         = diff -w --name-status --staged
+	d           = diff --ignore-all-space
+	dn          = diff --ignore-all-space --name-status
+	ds          = diff --ignore-all-space --staged
+	dns         = diff --ignore-all-space --name-status --staged
 	dt          = difftool
 	dts         = difftool --staged
-	g           = grep --full-name -nI
-	gi          = grep --full-name -nIi
+	g           = grep --full-name -I
+	gi          = grep --full-name -I --ignore-case
 	bl          = blame
 	cm          = commit
 	cmm         = commit --message
@@ -83,7 +84,7 @@
 	m           = merge
 	mt          = mergetool
 	rb          = rebase
-	rbi         = rebase --interactie
+	rbi         = rebase --interactive
 	cp          = cherry-pick
 	pl          = pull
 	plr         = pull --rebase
