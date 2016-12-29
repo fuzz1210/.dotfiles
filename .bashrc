@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 
+# terminal
+export TERM=xterm-256color
+
 # aliases
 alias ..='cd ..'
 alias ...='cd ../..'
@@ -19,8 +22,8 @@ fi
 
 # anyenv
 if [ -d $HOME/.anyenv ]; then
-    export PATH="$HOME/.anyenv/bin:$PATH"
-    eval "$(anyenv init -)"
+	export PATH="$HOME/.anyenv/bin:$PATH"
+	eval "$(anyenv init -)"
 fi
 
 # git
