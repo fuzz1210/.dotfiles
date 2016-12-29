@@ -58,6 +58,8 @@
 	c           = checkout
 	s           = status --branch --short
 	a           = add
+	ai          = add --interactive
+	ap          = add --patch
 	r           = reset
 	rs          = reset --soft
 	rm          = reset --mixed
