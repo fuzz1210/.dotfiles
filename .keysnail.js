@@ -37,13 +37,13 @@ key.setGlobalKey('<f1>', function (ev) {
     key.listKeyBindings();
 }, 'キーバインド一覧を表示');
 
-key.setViewKey(['g', 'g'], function (ev) {
-    goDoCommand("cmd_scrollBottom");
-}, 'ページ末尾へ移動');
-
-key.setViewKey('G', function (ev) {
+key.setViewKey('g', function (ev) {
     goDoCommand("cmd_scrollTop");
 }, 'ページ先頭へ移動');
+
+key.setViewKey('G', function (ev) {
+    goDoCommand("cmd_scrollBottom");
+}, 'ページ末尾へ移動');
 
 key.setViewKey('C-v', function (ev) {
     focusContent();
