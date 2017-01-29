@@ -57,16 +57,16 @@ key.setViewKey('w', function (ev) {
     BrowserCloseTabOrWindow();
 }, 'タブ / ウィンドウを閉じる');
 
-key.setViewKey('T', function (ev) {
+key.setViewKey('u', function (ev) {
     undoCloseTab();
 }, '閉じたタブを元に戻す');
 
-key.setViewKey('C-l', function (ev) {
+key.setViewKey('l', function (ev) {
     getBrowser().mTabContainer.advanceSelectedTab(1, true);
     focusContent();
 }, 'ひとつ右のタブへ');
 
-key.setViewKey('C-h', function (ev) {
+key.setViewKey('h', function (ev) {
     getBrowser().mTabContainer.advanceSelectedTab(-1, true);
     focusContent();
 }, 'ひとつ左のタブへ');
@@ -79,19 +79,11 @@ key.setViewKey('k', function (ev) {
     key.generateKey(ev.originalTarget, KeyEvent.DOM_VK_UP, true);
 }, '一行スクロールアップ');
 
-key.setViewKey('h', function (ev) {
-    key.generateKey(ev.originalTarget, KeyEvent.DOM_VK_LEFT, true);
-}, '左へスクロール');
-
-key.setViewKey('l', function (ev) {
-    key.generateKey(ev.originalTarget, KeyEvent.DOM_VK_RIGHT, true);
-}, '右へスクロール');
-
-key.setViewKey('n', function (ev) {
+key.setViewKey('C-f', function (ev) {
     goDoCommand("cmd_scrollPageDown");
 }, '一画面スクロールダウン');
 
-key.setViewKey('p', function (ev) {
+key.setViewKey('C-b', function (ev) {
     goDoCommand("cmd_scrollPageUp");
 }, '一画面分スクロールアップ');
 
