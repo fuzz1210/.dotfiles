@@ -29,6 +29,8 @@ fi
 # git
 if [ -f $(brew --prefix)/etc/bash_completion.d/git-completion.bash ]; then
 	source $(brew --prefix)/etc/bash_completion.d/git-completion.bash
+	# gitコマンドのエイリアスでも自動補完できるようにする
+	__git_complete g __git_main
 else
 	echo 'Please through the path of `git-completion.bash`, if you will use gitcli.'
 fi
