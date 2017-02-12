@@ -6,6 +6,8 @@ export TERM=xterm-256color
 # aliases
 alias ..='cd ..'
 alias ...='cd ../..'
+alias ....='cd ../../..'
+alias .....='cd ../../../..'
 alias l='ls -F --color=auto --show-control-chars'
 alias ll='l -lAh --time-style=long-iso'
 alias v='vim'
