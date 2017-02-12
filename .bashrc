@@ -27,21 +27,23 @@ if [ -d $HOME/.anyenv ]; then
 fi
 
 # git
-if [ -f $(brew --prefix)/etc/bash_completion.d/git-completion.bash ] && [ -f $(brew --prefix)/etc/bash_completion.d/git-prompt.sh ]; then
+if [ -f $(brew --prefix)/etc/bash_completion.d/git-completion.bash ]; then
 	source $(brew --prefix)/etc/bash_completion.d/git-completion.bash
+else
+	echo 'Please through the path of `git-completion.bash`, if you will use gitcli.'
+fi
+
+git_ps1=''
+if [ -f $(brew --prefix)/etc/bash_completion.d/git-prompt.sh ]; then
 	source $(brew --prefix)/etc/bash_completion.d/git-prompt.sh
 	GIT_PS1_SHOWDIRTYSTATE=true
 	GIT_PS1_SHOWUPSTREAM=true
 	GIT_PS1_SHOWUNTRACKEDFILES=true
 	GIT_PS1_SHOWSTASHSTATE=true
+	git_ps1="\[\e[0;33m\]\$(__git_ps1)\[\e[00m\]"
+else
+	echo 'Please through the path of `git-prompt.sh`, if you will use gitcli.'
 fi
 
 # prompt
-ps1="\[\e[0;32m\]\u@\h\[\e[00m\] \[\e[0;36m\]\w\[\e[00m\]"
-if type __git_ps1 >/dev/null 2>&1; then
-	ps1="$ps1\[\e[0;33m\]\$(__git_ps1)\[\e[00m\]"
-else
-	echo 'Please path through `git-prompt.sh`, if you use git cli.'
-fi
-ps1="$ps1 \$ "
-PS1=$ps1
+PS1="\[\e[0;32m\]\u@\h\[\e[00m\] \[\e[0;36m\]\w\[\e[00m\]$git_ps1 \$ "
