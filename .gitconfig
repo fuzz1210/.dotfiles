@@ -38,8 +38,8 @@
 	ff            = false
 	conflictstyle = diff3
 [mergetool]
-	prompt        = false
-	keepBackup    = false
+	prompt      = false
+	keepBackup  = false
 [pull]
 	ff          = only
 [push]
@@ -57,6 +57,7 @@
 	ls          = log --graph --abbrev-commit --date=short --date-order --find-renames --pretty=format:'%C(bold blue)%h%Creset %C(bold cyan)%ad%Creset %C(cyan)(%ar)%Creset %C(bold green)%an%Creset%C(bold yellow)%d%Creset%n~ %C(dim white)%s%Creset%n' --stat
 	ln          = log --graph --abbrev-commit --date=short --date-order --find-renames --pretty=format:'%C(bold blue)%h%Creset %C(bold cyan)%ad%Creset %C(cyan)(%ar)%Creset %C(bold green)%an%Creset%C(bold yellow)%d%Creset%n~ %C(dim white)%s%Creset%n' --name-status
 	b           = branch --verbose --verbose
+	ba          = branch --verbose --verbose --all
 	c           = checkout
 	s           = status --branch --short
 	a           = add
@@ -87,5 +88,5 @@
 	rbi         = rebase --interactive
 	cp          = cherry-pick
 	pl          = pull
-	plr         = pull --rebase
+	plrb        = pull --rebase
 	ps          = push
