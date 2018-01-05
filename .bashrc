@@ -29,6 +29,11 @@ if [ -d $(brew --prefix findutils)/libexec/gnubin ] && [ -d $(brew --prefix find
 	export MANPATH="$(brew --prefix findutils)/libexec/gnuman:$MANPATH"
 fi
 
+# dircolors
+if [ -f $HOME/.config/dircolors/dircolors-solarized/dircolors.ansi-universal ]; then
+	eval $(dircolors $HOME/.config/dircolors/dircolors-solarized/dircolors.ansi-universal)
+fi
+
 # anyenv
 if [ -d $HOME/.anyenv ]; then
 	export PATH="$HOME/.anyenv/bin:$PATH"
