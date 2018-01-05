@@ -20,9 +20,13 @@ if which brew >/dev/null; then
 fi
 
 # gnu
-if [ -d /usr/local/opt/coreutils/libexec/gnubin ] && [ -d /usr/local/opt/coreutils/libexec/gnuman ]; then
-	export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
-	export MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
+if [ -d $(brew --prefix coreutils)/libexec/gnubin ] && [ -d $(brew --prefix coreutils)/libexec/gnuman ]; then
+	export PATH="$(brew --prefix coreutils)/libexec/gnubin:$PATH"
+	export MANPATH="$(brew --prefix coreutils)/libexec/gnuman:$MANPATH"
+fi
+if [ -d $(brew --prefix findutils)/libexec/gnubin ] && [ -d $(brew --prefix findutils)/libexec/gnuman ]; then
+	export PATH="$(brew --prefix findutils)/libexec/gnubin:$PATH"
+	export MANPATH="$(brew --prefix findutils)/libexec/gnuman:$MANPATH"
 fi
 
 # anyenv
