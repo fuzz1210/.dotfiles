@@ -41,6 +41,8 @@ if [ -d $HOME/.anyenv ]; then
 fi
 
 # git
+git_ps1=''
+
 if [ -f $(brew --prefix)/etc/bash_completion.d/git-completion.bash ]; then
 	source $(brew --prefix)/etc/bash_completion.d/git-completion.bash
 	# gitコマンドのエイリアスでも自動補完できるようにする
@@ -49,7 +51,6 @@ else
 	echo 'Please through the path of `git-completion.bash`, if you will use gitcli.'
 fi
 
-git_ps1=''
 if [ -f $(brew --prefix)/etc/bash_completion.d/git-prompt.sh ]; then
 	source $(brew --prefix)/etc/bash_completion.d/git-prompt.sh
 	GIT_PS1_SHOWDIRTYSTATE=true
@@ -60,6 +61,13 @@ if [ -f $(brew --prefix)/etc/bash_completion.d/git-prompt.sh ]; then
 else
 	echo 'Please through the path of `git-prompt.sh`, if you will use gitcli.'
 fi
+
+if [ -f $(brew --prefix)/share/git-core/contrib/diff-highlight/diff-highlight ]; then
+	export PATH="$(brew --prefix)/share/git-core/contrib/diff-highlight:$PATH"
+else
+	echo 'Please through the path of `diff-highlight`, if you will use gitcli.'
+fi
+
 
 # prompt
 PS1="\[\e[0;32m\]\u@\h\[\e[00m\] \[\e[0;36m\]\w\[\e[00m\]$git_ps1 \$ "
