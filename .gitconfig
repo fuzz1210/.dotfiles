@@ -16,7 +16,7 @@
 	meta        = yellow
 	frag        = cyan
 	old         = red
-	new	        = green
+	new	    = green
 [color "grep"]
 	linenumber  = yellow
 	match       = bold red
@@ -45,9 +45,9 @@
 [push]
 	default     = current
 [pager]
-	log         = diff-highlight | less
-	show        = diff-highlight | less
-	diff        = diff-highlight | less
+	log         = diff-highlight | less -RMiS
+	show        = diff-highlight | less -RMiS
+	diff        = diff-highlight | less -RMiS
 [alias]
 	cf          = config
 	cfg         = config --global
