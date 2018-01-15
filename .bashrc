@@ -1,7 +1,8 @@
 #!/usr/bin/env bash
 
-# terminal
 export TERM=xterm-256color
+export LESS='-MRiSW'
+export PAGER=less
 
 # aliases
 alias ..='cd ..'
@@ -10,7 +11,6 @@ alias ....='cd ../../..'
 alias .....='cd ../../../..'
 alias l='ls -F --color=always --show-control-chars'
 alias ll='l -lAh --time-style=long-iso'
-alias less='less -RMiS'
 alias v='vim'
 alias g='git'
 alias sudo='sudo -E '

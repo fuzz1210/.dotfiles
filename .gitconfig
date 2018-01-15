@@ -45,9 +45,9 @@
 [push]
 	default     = current
 [pager]
-	log         = diff-highlight | less -RMiS
-	show        = diff-highlight | less -RMiS
-	diff        = diff-highlight | less -RMiS
+	log         = diff-highlight | less
+	show        = diff-highlight | less
+	diff        = diff-highlight | less
 [alias]
 	cf          = config
 	cfg         = config --global
