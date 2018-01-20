@@ -45,6 +45,7 @@
 [push]
 	default     = current
 [pager]
+	branch      = less -FX
 	log         = diff-highlight | less
 	show        = diff-highlight | less
 	diff        = diff-highlight | less
