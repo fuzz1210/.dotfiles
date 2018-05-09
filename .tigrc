@@ -1,0 +1,4 @@
+set line-graphics = utf-8
+set diff-highlight = true
+set ignore-space = at-eol
+

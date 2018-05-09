@@ -1,93 +1,104 @@
 # .gitconfig
 
 [user]
-	name        = fuzz1210
-	email       = fuzz1210@gmail.com
+    name                = fuzz1210
+    email               = fuzz1210@gmail.com
 [core]
-	editor      = vim
+    editor              = vim
+    pager               = less
 [color]
-	ui          = true
+    ui                  = true
+[color "branch"]
+    current             = green bold
+    local               = green
 [color "status"]
-	added       = green
-	changed     = yellow
-	unmerged    = yellow
-	untracked   = red
+    added               = green
+    changed             = yellow
+    unmerged            = yellow
+    untracked           = red
+[color "decorate"]
+    HEAD                = green bold
+    branch              = green
+    remoteBranch        = red
+    stash               = yellow
 [color "diff"]
-	meta        = yellow
-	frag        = cyan
-	old         = red
-	new	        = green
+    meta                = yellow reverse
+    frag                = cyan reverse
+    old                 = red
+    new                 = green
 [color "grep"]
-	linenumber  = yellow
-	match       = bold red
-	separator   = white
-	filename    = cyan
+    linenumber          = yellow
+    match               = red bold
+    separator           = white
+    filename            = cyan
 [log]
-	date        = iso
+    date                = iso
 [diff]
-	compactionHeuristic = true
-	renames             = true
-	tool                = vimdiff
+    compactionHeuristic = true
+    renames             = true
+    tool                = vimdiff
 [difftool]
-	prompt      = false
+    prompt              = false
 [grep]
-	linenumber  = true
+    linenumber          = true
 [commit]
-	verbose     = true
+    verbose             = true
 [merge]
-	ff            = false
-	conflictstyle = diff3
+    ff                  = false
+    conflictstyle       = diff3
 [mergetool]
-	prompt      = false
-	keepBackup  = false
+    prompt              = false
+    keepBackup          = false
 [pull]
-	ff          = only
+    ff                  = only
 [push]
-	default     = current
+    default             = simple
 [pager]
-	branch      = less -FX
-	log         = diff-highlight | less
-	show        = diff-highlight | less
-	diff        = diff-highlight | less
+    branch              = less -FX
+    log                 = diff-highlight | less
+    show                = diff-highlight | less
+    diff                = diff-highlight | less
 [alias]
-	cf          = config
-	cfg         = config --global
-	sh          = show
-	l           = log --graph --abbrev-commit --date=short --date-order --find-renames --pretty=format:'%C(bold blue)%h%Creset %C(bold cyan)%ad%Creset %C(cyan)(%ar)%Creset %C(bold green)%an%Creset%C(bold yellow)%d%Creset%n~ %C(white)%s%Creset%n'
-	la          = !git l --all
-	ls          = !git l --stat --pretty=format:'%C(bold blue)%h%Creset %C(bold cyan)%ad%Creset %C(cyan)(%ar)%Creset %C(bold green)%an%Creset%C(bold yellow)%d%Creset%n~ %C(dim white)%s%Creset%n'
-	ln          = !git ls --name-status
-	b           = branch --verbose --verbose
-	ba          = branch --verbose --verbose --all
-	c           = checkout
-	s           = status --branch --short
-	a           = add
-	ai          = add --interactive
-	ap          = add --patch
-	r           = reset
-	rs          = reset --soft
-	rm          = reset --mixed
-	rh          = reset --hard
-	rs1         = reset --soft HEAD^
-	rm1         = reset --mixed HEAD^
-	rh1         = reset --hard HEAD^
-	d           = diff --ignore-all-space
-	dn          = diff --ignore-all-space --name-status
-	ds          = diff --ignore-all-space --staged
-	dns         = diff --ignore-all-space --name-status --staged
-	dt          = difftool
-	dts         = difftool --staged
-	g           = grep --full-name -I
-	gi          = grep --full-name -I --ignore-case
-	bl          = blame
-	cm          = commit
-	cmm         = commit --message
-	f           = fetch --prune
-	m           = merge
-	mt          = mergetool
-	rb          = rebase
-	rbi         = rebase --interactive
-	cp          = cherry-pick
-	pl          = pull
-	plrb        = pull --rebase
-	ps          = push
+    cf   = config
+    cfg  = !git cf --global
+    sh   = show
+    l    = log --graph --abbrev-commit --date=short --date-order --find-renames --pretty=format:'%C(yellow)%h%Creset %C(cyan)%ad%Creset %C(cyan)(%ar)%Creset %C(blue)%an%Creset%C(auto)%d%Creset%n~ %C(white)%s%Creset%n'
+    la   = !git l --all
+    ls   = !git l --stat
+    ln   = !git l --name-status
+    b    = branch
+    bv   = !git b --verbose --verbose
+    ba   = !git bv --all
+    c    = checkout
+    s    = status --branch --short
+    st   = stash
+    a    = add
+    ai   = !git a --interactive
+    ap   = !git a --patch
+    r    = reset
+    rs   = !git r --soft
+    rm   = !git r --mixed
+    rh   = !git r --hard
+    rs1  = !git r --soft HEAD^
+    rm1  = !git r --mixed HEAD^
+    rh1  = !git r --hard HEAD^
+    d    = diff --ignore-all-space
+    dn   = !git d --name-status
+    ds   = !git d --staged
+    dns  = !git dn --staged
+    dt   = difftool
+    dts  = !git dt --staged
+    g    = grep --full-name -I
+    gi   = !git g --ignore-case
+    bl   = blame
+    cm   = commit
+    cmm  = commit --message
+    f    = fetch --prune
+    m    = merge
+    mt   = mergetool
+    rb   = rebase
+    rbi  = !git rb --interactive
+    cp   = cherry-pick
+    pl   = pull
+    plrb = !git pl --rebase
+    ps   = push
