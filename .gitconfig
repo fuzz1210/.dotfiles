@@ -1,4 +1,4 @@
-# .gitconfig
+
 
 [user]
     name                = fuzz1210
@@ -102,3 +102,4 @@
     pl   = pull
     plrb = !git pl --rebase
     ps   = push
+    ignore = "!gi() { curl -L -s https://www.gitignore.io/api/$@ ;}; gi"
