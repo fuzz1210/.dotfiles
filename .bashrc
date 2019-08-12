@@ -37,6 +37,15 @@ if [ -d $grep_bin ] && [ -d $grep_man ]; then
   export MANPATH="$grep_man:$MANPATH"
 fi
 
+unset sed_bin sed_man
+sed_bin=$(brew --prefix gnu-sed)/libexec/gnubin
+sed_man=$(brew --prefix gnu-sed)/libexec/gnuman
+if [ -d $sed_bin ] && [ -d $sed_man ]; then
+  export PATH="$sed_bin:$PATH"
+  export MANPATH="$sed_man:$MANPATH"
+fi
+unset sed_bin sed_man
+
 ##############################
 # dircolors
 #
