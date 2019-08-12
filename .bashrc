@@ -30,6 +30,13 @@ if [ -d $findutils_bin ] && [ -d $findutils_man ]; then
 fi
 unset findutils_bin findutils_man
 
+grep_bin=$(brew --prefix grep)/libexec/gnubin
+grep_man=$(brew --prefix grep)/libexec/gnuman
+if [ -d $grep_bin ] && [ -d $grep_man ]; then
+  export PATH="$grep_bin:$PATH"
+  export MANPATH="$grep_man:$MANPATH"
+fi
+
 ##############################
 # dircolors
 #
