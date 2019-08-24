@@ -1,105 +1,117 @@
-
-
+[include]
+  path                = ~/.gitconfig.local
 [user]
-    name                = fuzz1210
-    email               = fuzz1210@gmail.com
+  name                = fuzz1210
+  email               = fuzz1210@gmail.com
 [core]
-    editor              = vim
-    pager               = less
+  editor              = vim
+  pager               = less
 [color]
-    ui                  = true
+  ui                  = true
 [color "branch"]
-    current             = green bold
-    local               = green
+  current             = green bold
+  local               = green
 [color "status"]
-    added               = green
-    changed             = yellow
-    unmerged            = yellow
-    untracked           = red
+  added               = green
+  changed             = yellow
+  unmerged            = yellow
+  untracked           = red
 [color "decorate"]
-    HEAD                = green bold
-    branch              = green
-    remoteBranch        = red
-    stash               = yellow
+  HEAD                = green bold
+  branch              = green
+  remoteBranch        = red
+  stash               = yellow
 [color "diff"]
-    meta                = yellow reverse
-    frag                = cyan reverse
-    old                 = red
-    new                 = green
+  meta                = yellow reverse
+  frag                = cyan reverse
+  old                 = red
+  new                 = green
 [color "grep"]
-    linenumber          = yellow
-    match               = red bold
-    separator           = white
-    filename            = cyan
+  linenumber          = yellow
+  match               = red bold
+  separator           = white
+  filename            = cyan
 [log]
-    date                = iso
+  date                = iso
 [diff]
-    compactionHeuristic = true
-    renames             = true
-    tool                = vimdiff
+  compactionHeuristic = true
+  renames             = true
+  tool                = vimdiff
 [difftool]
-    prompt              = false
+  prompt              = false
 [grep]
-    linenumber          = true
+  linenumber          = true
 [commit]
-    verbose             = true
+  verbose             = true
 [merge]
-    ff                  = false
-    conflictstyle       = diff3
+  ff                  = false
+  conflictstyle       = diff3
 [mergetool]
-    prompt              = false
-    keepBackup          = false
+  prompt              = false
+  keepBackup          = false
+[fetch]
+  prune               = true
+[rebase]
+  autoStash           = true
+  autoSquash          = true
 [pull]
-    ff                  = only
+  ff                  = only
 [push]
-    default             = simple
+  default             = simple
 [pager]
-    branch              = less -FX
-    log                 = diff-highlight | less
-    show                = diff-highlight | less
-    diff                = diff-highlight | less
+  branch              = less -FX
+  log                 = diff-highlight | less
+  show                = diff-highlight | less
+  diff                = diff-highlight | less
 [alias]
-    cf   = config
-    cfg  = !git cf --global
-    sh   = show
-    l    = log --graph --abbrev-commit --date=short --date-order --find-renames --pretty=format:'%C(yellow)%h%Creset %C(cyan)%ad%Creset %C(cyan)(%ar)%Creset %C(blue)%an%Creset%C(auto)%d%Creset%n~ %C(white)%s%Creset%n'
-    la   = !git l --all
-    ls   = !git l --stat
-    ln   = !git l --name-status
-    b    = branch
-    bv   = !git b --verbose --verbose
-    ba   = !git bv --all
-    c    = checkout
-    s    = status --branch --short
-    st   = stash
-    a    = add
-    ai   = !git a --interactive
-    ap   = !git a --patch
-    r    = reset
-    rs   = !git r --soft
-    rm   = !git r --mixed
-    rh   = !git r --hard
-    rs1  = !git r --soft HEAD^
-    rm1  = !git r --mixed HEAD^
-    rh1  = !git r --hard HEAD^
-    d    = diff --ignore-all-space
-    dn   = !git d --name-status
-    ds   = !git d --staged
-    dns  = !git dn --staged
-    dt   = difftool
-    dts  = !git dt --staged
-    g    = grep --full-name -I
-    gi   = !git g --ignore-case
-    bl   = blame
-    cm   = commit
-    cmm  = commit --message
-    f    = fetch --prune
-    m    = merge
-    mt   = mergetool
-    rb   = rebase
-    rbi  = !git rb --interactive
-    cp   = cherry-pick
-    pl   = pull
-    plrb = !git pl --rebase
-    ps   = push
-    ignore = "!gi() { curl -L -s https://www.gitignore.io/api/$@ ;}; gi"
+  ignore  = "!gi() { curl -L -s https://www.gitignore.io/api/$@ ;}; gi"
+  cf      = config
+  cfg     = config --global
+  sh      = show
+  l       = log --graph --abbrev-commit --date=short --date-order --find-renames --pretty=format:'%C(yellow)%h%Creset %C(cyan)%ad%Creset %C(cyan)(%ar)%Creset %C(blue)%an%Creset%C(auto)%d%Creset%n~ %C(white)%s%Creset%n'
+  la      = !git l --all
+  ls      = !git l --stat
+  ln      = !git l --name-status
+  las     = !git l --all --stat
+  lan     = !git l --all --name-status
+  b       = branch
+  bv      = !git b --verbose --verbose
+  ba      = !git bv --all
+  c       = checkout
+  cb      = checkout -b
+  s       = status --branch --short
+  st      = stash
+  sts     = !git st save
+  stp     = !git st pop
+  sta     = !git st apply
+  std     = !git st drop
+  a       = add
+  ap      = !add --patch
+  r       = reset
+  rs      = reset --soft
+  rh      = reset --hard
+  rs1     = reset --soft HEAD^
+  rm1     = reset --mixed HEAD^
+  rh1     = reset --hard HEAD^
+  d       = diff --ignore-all-space --ignore-blank-lines
+  ds      = diff --staged
+  dn      = diff --name-status
+  dsn     = diff --staged --name-status
+  dt      = difftool
+  dts     = difftool --staged
+  g       = grep --full-name -I
+  bl      = blame --date=short -w
+  cm      = commit
+  cmm     = !git cm --message
+  cmf     = !git cm --fixup
+  f       = fetch
+  m       = merge
+  mt      = mergetool
+  rb      = rebase
+  rbi     = rebase --interactive
+  rbc     = rebase --continue
+  cp      = cherry-pick
+  pl      = pull
+  plrb    = pull --rebase
+  ps      = push
+  pst     = push --tags
