@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
-readonly BREW_PREFIX=$(brew --prefix)
 
 ##############################
 # less
@@ -14,32 +13,32 @@ export PAGER=less
 ##############################
 # gnu
 #
-coreutils_bin=$(brew --prefix coreutils)/libexec/gnubin
-coreutils_man=$(brew --prefix coreutils)/libexec/gnuman
+coreutils_bin=/usr/local/opt/coreutils/libexec/gnubin
+coreutils_man=/usr/local/opt/coreutils/libexec/gnuman
 if [ -d $coreutils_bin ] && [ -d $coreutils_man ]; then
   export PATH="$coreutils_bin:$PATH"
   export MANPATH="$coreutils_man:$MANPATH"
 fi
 unset coreutils_bin coreutils_man
 
-findutils_bin=$(brew --prefix findutils)/libexec/gnubin
-findutils_man=$(brew --prefix findutils)/libexec/gnuman
+findutils_bin=/usr/local/opt/findutils/libexec/gnubin
+findutils_man=/usr/local/opt/findutils/libexec/gnuman
 if [ -d $findutils_bin ] && [ -d $findutils_man ]; then
   export PATH="$findutils_bin:$PATH"
   export MANPATH="$findutils_man:$MANPATH"
 fi
 unset findutils_bin findutils_man
 
-grep_bin=$(brew --prefix grep)/libexec/gnubin
-grep_man=$(brew --prefix grep)/libexec/gnuman
+grep_bin=/usr/local/opt/grep/libexec/gnubin
+grep_man=/usr/local/opt/grep/libexec/gnuman
 if [ -d $grep_bin ] && [ -d $grep_man ]; then
   export PATH="$grep_bin:$PATH"
   export MANPATH="$grep_man:$MANPATH"
 fi
 
 unset sed_bin sed_man
-sed_bin=$(brew --prefix gnu-sed)/libexec/gnubin
-sed_man=$(brew --prefix gnu-sed)/libexec/gnuman
+sed_bin=/usr/local/opt/gnu-sed/libexec/gnubin
+sed_man=/usr/local/opt/gnu-sed/libexec/gnuman
 if [ -d $sed_bin ] && [ -d $sed_man ]; then
   export PATH="$sed_bin:$PATH"
   export MANPATH="$sed_man:$MANPATH"
@@ -75,7 +74,7 @@ export GOPATH=$HOME/.go
 #
 git_ps1=''
 
-git_completion=$BREW_PREFIX/etc/bash_completion.d/git-completion.bash
+git_completion=/usr/local/etc/bash_completion.d/git-completion.bash
 if [ -f $git_completion ]; then
   . $git_completion
   # gitコマンドのエイリアスでも自動補完できるようにする
@@ -85,7 +84,7 @@ else
 fi
 unset git_completion
 
-tig_completion=$BREW_PREFIX/etc/bash_completion.d/tig-completion.bash
+tig_completion=/usr/local/etc/bash_completion.d/tig-completion.bash
 if [ -f $tig_completion ]; then
   . $tig_completion
 else
@@ -93,7 +92,7 @@ else
 fi
 unset tig_completion
 
-git_prompt=$BREW_PREFIX/etc/bash_completion.d/git-prompt.sh
+git_prompt=/usr/local/etc/bash_completion.d/git-prompt.sh
 if [ -f $git_prompt ]; then
   . $git_prompt
   GIT_PS1_SHOWDIRTYSTATE=true
@@ -106,7 +105,7 @@ else
 fi
 unset git_prompt
 
-diff_highlight=$BREW_PREFIX/share/git-core/contrib/diff-highlight
+diff_highlight=/usr/local/share/git-core/contrib/diff-highlight
 if [ -f $diff_highlight/diff-highlight ]; then
   export PATH="$diff_highlight:$PATH"
 else
