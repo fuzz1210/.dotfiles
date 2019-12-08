@@ -57,12 +57,11 @@ unset dircolors
 ##############################
 # anyenv
 #
-anyenv_bin=$HOME/.anyenv/bin
-if [ -d $anyenv_bin ]; then
-  export PATH="$anyenv_bin:$PATH"
+if [ -n "$(which anyenv)" ]; then
   eval "$(anyenv init -)"
+else
+  echo 'Not found: anyenv'
 fi
-unset anyenv_bin
 
 ##############################
 # Golang
